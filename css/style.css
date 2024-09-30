@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Patua+One&family=Stylish&family=Sumana:wght@400;700&display=swap');
+
+/* ============초기화 */
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul,li{list-style: none;}
+a{text-decoration: none;color: inherit;}
+img{max-width: 100%;vertical-align: top;}
+button{cursor: pointer;}
+html, body {width: 100%; height: 100%;}
+::selection { color:none; background:none;}
+/* =======================================팝업창 */
+/* ==============UX/UI팝업창 */
+#modal {width: 100%;height: 100%;position: fixed;top: 0;left: 0;z-index: 99;background:rgba(0,0,0,0.6);display: none;}
+#modal>div{width: 70%;height:80%;position: absolute; top: 50%;left: 50%;transform: translate(-50%,-50%); background: #fff;overflow-y: auto;}
+#modal>div img{object-fit: cover;}
+.page>img{width: 100%;height: 100%;object-fit: cover;mix-blend-mode: lighten;opacity: 0.06;position: absolute;}
+
+/* ==============================================디자인팝업창 */
+#modal1{width:100%;height:100%;background:rgba(0,0,0,0.6);position: fixed;z-index: 99;position:fixed;display: none;}
+#modal1>div{left: 50%;top: 50%;transform: translate(-50%, -50%); width: 1224px;height:700px;background:#fff;overflow:hidden;position: absolute;padding-top: 28px;}
+#modal1>div::after{content: "";display: block;width: 100%;height: 28px;background:#D9D9D9;position: absolute;top: 0;left: 0;}
+#modal1 .circle{width:14px;height: 14px;background:#ffffff;position: absolute;top: 6px;left:6px;border-radius: 50%;z-index: 10;}
+#modal1 p{font-size: 12px;color: #3F3F3F;font-weight: bold;font-family: "Noto Sans KR", sans-serif;position: absolute;z-index: 9;top: 4px;left: 32px;}
+#modal1>div .material-symbols-outlined {color:#303030;font-size: 25px;position: absolute;top: 2px;z-index: 10;font-weight:450;right:8px;cursor: pointer;}
+#modal1 button{width: 315px;height: 58px;background: #FCB247;border: none;position: absolute;bottom: 50px;right: 40px;color: #fff;font-size: 18px;font-family: "Noto Sans KR", sans-serif;font-weight: bold;transition: 0.3s;border-radius: 34px;}
+#modal1 button a{width: 100%;height: 100%;display: block;border-radius: 34px;line-height: 58px;}
+#modal1 button:hover{background: none;border:1px solid #FCB247;color: #FCB247;scale:0.95;}
+
+/* =============================대전교육청 */
+.pop4>div img.d1{width: 360px;position: absolute;top:152px;left: 30px;}
+.pop4>div img.d2{width:360px;position: absolute;top:152px;left: 432px;}
+.pop4>div img.d3{width:360px;position: absolute;top: 152px;left: 817px;}
+
+/* =============================공영홈쇼핑 */
+.pop5>div img.d1{width:522px;position: absolute;top: 90px;left: 150px;}
+
+/* =============================한국상품BEST5 */
+.pop6>div img.d1{width:268px;position: absolute;top: 72px;left: 52px;}
+.pop6>div img.d2{width:268px;position: absolute;top: 72px;left: 335px;}
+.pop6>div img.d3{width:268px;position: absolute;top: 72px;left: 618px;}
+.pop6>div img.d4{width:268px;position: absolute;top: 72px;left: 901px;}
+.pop6>div img.d5{width:268px;position: absolute;top: 366px;left: 22px;}
+.pop6>div img.d6{width:268px;position: absolute;top: 366px;left: 301px;}
+.pop6>div img.d7{width:268px;position: absolute;top: 366px;left: 580px;}
+
+/* =============================설화수 */
+.pop7>div img.d1{width:311px;position: absolute;top: 50px;left: 94px;border: 1px solid #999;}
+.pop7>div img.d2{width:311px;position: absolute;bottom:385px;left: 442px;border: 1px solid #999;border-bottom: none;}
+.pop7>div img.d3{width:311px;position: absolute;top: 313px;left: 442px;border: 1px solid #999;}
+.pop7>div img.d4{width:311px;position: absolute;bottom: 128px; right: 122px;border: 1px solid #999;}
+
+/* =============================우리농가수 */
+.pop8>div img.d1{width:259px;position: absolute;top: 43px;left: 30px;border: 1px solid #999;}
+.pop8>div img.d2{width:259px;position: absolute;bottom: -1070px; left: 310px;border: 1px solid #999;}
+.pop8>div img.d3{width:259px;position: absolute;bottom: -410px; left: 590px;border: 1px solid #999;}
+.pop8>div img.d4{width:259px;position: absolute;bottom: 265px; right: 94px;border: 1px solid #999;}
+
+/* =============================던킨도너츠 */
+.pop9>div img.d1{width: 374px;position: absolute;top: 48px;left: 30px;}
+.pop9>div img.d2{width: 374px;position: absolute;bottom: 6px;left: 424px;}
+
+/* =============================리에티 */
+.pop10>div img.d1{width:451px;position: absolute;top: 43px;left: 140px;}
+.pop10>div img.d2{width: 451px;position: absolute;bottom: 156px;left: 638px;}
+
+
+
+/* ===============페이지1 */
+nav{position: fixed;top: 50%;right: 35px;transform: translateY(-50%);z-index: 10;}
+nav>ul{display: flex;flex-direction: column;gap: 18px;}
+nav>ul>li{border-radius: 50%;border: 1px solid #ffffff;transition: 0.3s;}
+nav>ul>li>a{width: 12px;height:12px;border-radius: 50%;background: rgba(255,255,255,0.3);display: block;transition: 0.3s;}
+nav>ul>li>a.on{background: #ffffff;border: none;scale: 1.5;}
+nav>ul>li>a span{text-transform: uppercase;position: absolute;right:20px;width:100px;font-size: 12px;text-align: right;color: #fff;opacity: 0;transition: 0.2s;text-shadow: 1px 1px 2px #00000087;}
+nav>ul>li>a:hover span{opacity: 1;}
+
+.page{width: 100%;height: 100vh;}
+.p1{background: #262626;position: relative;overflow: hidden;}
+.p1 .titel{width: 702px;height: 702px;border: 1px solid #fff;position: absolute;left: 50%;top: 60px;transform: translateX(-50%);border-radius: 50%;text-align: center;transition: 0.5s;}
+.p1 .titel:hover{width:700px;height: 700px;top: 65px;border: 1px solid rgba(255,255,255,0.5);}
+.p1 .titel h1{font-size: 98px;font-family: "Patua One", serif;text-transform: uppercase;color: #ffffff;letter-spacing: 3px;line-height: 702px;display: inline;transition: 0.3s;font-weight: initial;}
+.p1 .titel h1:hover{color: #3997DC;text-shadow: 0px 3.56px 3.56px rgba(0,0,0,0.25);}
+.p1 p{ font-family: "Noto Sans", sans-serif;font-weight: 200; color: #fff;position: absolute;}
+.p1 .text1{top: 10px;left: 48px;font-size: 20px;}
+.p1 .text2{top: 10px;right: 48px;font-size: 20px;}
+.p1 .text3{bottom: 49px;left: 48px;font-size: 20px;}
+.p1 .text5{bottom: 49px;right: 48px;font-size: 20px;}
+.p1 .text4{font-size: 25px;left: 50%;transform: translateX(-50%);bottom: 48px;}
+.p1 .bubble1{width: 84px;height: 84px;border-radius: 50%;border: 1px solid #3997DC;position: absolute;top: 100%;left: 329px;animation:linear bub 6s infinite;}
+.p1 .bubble2{width: 56px;height: 56px;border-radius: 50%;position: absolute;border: 2px solid #fff;top: 100%;;left: 447px;animation:linear bub 7s 0.5s infinite;}
+.p1 .bubble3{width: 44px;height: 44px;border-radius: 50%;position: absolute;border: 1px solid #3997DC;top: 100%;left: 542px;animation:linear bub 8s 1.5s infinite;}
+.p1 .bubble4{width: 162px;height: 162px;border-radius: 50%;position: absolute;border: 3px solid #3997DC;top:100%;right: 380px;bottom: 296px;animation:linear bub 4s infinite;}
+.p1 .bubble5{width: 28px;height: 28px;border-radius: 50%;position: absolute;border: 1px solid #fff;right: 515px;top: 100%;animation:linear bub 9s 1s infinite;}
+.p1 .bubble6{width: 114px;height: 114px;border-radius: 50%;position: absolute;border: 2px solid #fff;right: 415px;top: 100%;animation:linear bub 5s 2s infinite;}
+@keyframes bub{
+  0%{top: 100%;opacity: 1;}
+  100%{top: 0%;opacity: 0;}
+}
+@keyframes big{
+  0%{opacity: 1;}
+  50%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+/* ==============페이지2 */
+.p2{background: #E7E7E7;position: relative;overflow: hidden;}
+.p2>ul{display: flex;position: absolute;top: 0;width: 100%;height: 100%;}
+.p2 .left{flex: 1 1 847px;}
+.p2 .left>ul>li:first-child{height: 654px;position: relative;}
+.p2 .left .boll{width: 568px;height: 568px;border-radius: 50%;background: linear-gradient( -34deg, #bfbfbf 0%,#ececec 40%, #fff 90%);position: absolute;left: 188px;top: 70px;border: 1px solid #69696928;animation: mov 2s infinite ease-in-out;}
+@keyframes mov{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(20px);}
+  100%{transform: translateY(0px);}
+}
+.p2 .left>ul>li:last-child{height:calc(952px - 654px);position: relative;}
+.p2 .left>ul h2{font-size: 30px;color: #3997DC;font-family: "Noto Sans", sans-serif;position: absolute;top: 15px;left: 278px;}
+.p2 .left>ul p{font-size: 28px;color: rgba(0,0,0,0.5);  font-family: "Stylish", serif;position: absolute;top: 72px;left: 275px;line-height: 153%;text-align: center;}
+.p2 .right{flex: 1 1 1074px;position: relative;}
+.p2 .right section{width: 896px;height: 845px;background: #DAD9D9;border-radius: 50% 50% 0 0;bottom: 0;position: absolute;left: 77px;}
+.p2 .right  h2{font-size: 58px;text-transform: uppercase;font-family: "Patua One", serif;color: #3997DC;font-weight: initial;letter-spacing: 8px;position: absolute;top: 0;left: 50%;transform: translateX(-50%);top: 64px;}
+.p2 .right h2::after{display: block;content: "";width: 97%;height: 2px;background: #3997DC;}
+.p2 .right h3{font-size: 38px;font-family: "Sumana", serif;text-transform: uppercase;color: #3997DC;line-height: 74px;}
+.p2 .right p{font-family: "Noto Sans KR", sans-serif;font-size: 22px;color: rgba(0,0,0,0.5);font-weight:450;line-height: 34px;}
+.p2 .right p span{font-size: 16px;}
+.p2 .right .con{position: absolute;top: 210px;left: 139px;}
+.p2 .right .educ{position: absolute;top:450px;left: 139px;}
+.p2 .right .licen{position: absolute;top:590px;left: 139px;}
+.p2 .skills{position: absolute;top: 166px;right: 130px;}
+.p2 .skills>ul>li>ul{display: flex;gap:0 10px;align-items: center;}
+.p2 .skills .img2{width: 50px; height: 50px;margin-bottom: 8px;}
+.p2 .skills .img2 img{width: 100%;height: 100%;object-fit: cover;opacity: 0.5;}
+.p2 .skills .ps .img2 img:hover {filter: invert(31%) sepia(51%) saturate(4680%) hue-rotate(218deg) brightness(99%) contrast(104%);opacity: 0.7;}
+.p2 .skills .ai .img2 img:hover {filter: invert(81%) sepia(27%) saturate(3752%) hue-rotate(336deg) brightness(100%) contrast(104%);opacity: 0.7;}
+.p2 .skills .figma .img2 img:hover {filter: invert(72%) sepia(76%) saturate(4647%) hue-rotate(189deg) brightness(103%) contrast(105%);opacity: 0.7;}
+.p2 .skills .ae .img2 img:hover {filter: invert(28%) sepia(68%) saturate(1750%) hue-rotate(230deg) brightness(90%) contrast(89%);opacity: 0.7;}
+.p2 .skills .pr .img2 img:hover {filter: invert(38%) sepia(71%) saturate(4201%) hue-rotate(239deg) brightness(102%) contrast(101%);opacity: 0.7;}
+.p2 .skills .visual .img2 img:hover {filter: invert(37%) sepia(28%) saturate(4337%) hue-rotate(199deg) brightness(100%) contrast(101%);opacity: 0.7;}
+.p2 .skills .Html5 .img2 img:hover {filter: invert(58%) sepia(90%) saturate(5051%) hue-rotate(360deg) brightness(102%) contrast(106%);opacity: 0.7;}
+.p2 .skills .css .img2 img:hover {filter: invert(47%) sepia(77%) saturate(1607%) hue-rotate(187deg) brightness(92%) contrast(92%);opacity: 0.7;}
+.p2 .skills .jq .img2 img:hover {filter: invert(42%) sepia(83%) saturate(2236%) hue-rotate(189deg) brightness(88%) contrast(89%);opacity: 0.7;}
+.p2 .skills .graph>ul{display: flex;}
+.p2 .skills .graph>ul>li{width: 36px;height: 12px;background:rgba(0,0,0,0.1);transform: translateY(-50%);border: 1px solid rgba(0,0,0,0.5);}
+.p2 .skills .graph>ul>li:nth-child(1)::before{content: ""; display: block; width:0;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; transition: 0.3s;}
+.p2 .skills .graph>ul>li:nth-child(1).on::before{content: ""; display: block; width:100%;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; }
+
+.p2 .skills .graph>ul>li:nth-child(2)::before{content: ""; display: block; width:0;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; transition: 0.3s 0.3s;}
+.p2 .skills .graph>ul>li:nth-child(2).on::before{content: ""; display: block; width:100%;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; }
+
+.p2 .skills .graph>ul>li:nth-child(3)::before{content: ""; display: block; width:0;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; transition: 0.3s 0.6s;}
+.p2 .skills .graph>ul>li:nth-child(3).on::before{content: ""; display: block; width:100%;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; }
+
+.p2 .skills .graph>ul>li:nth-child(4)::before{content: ""; display: block; width:0;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; transition: 0.3s 0.9s;}
+.p2 .skills .graph>ul>li:nth-child(4).on::before{content: ""; display: block; width:100%;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; }
+.p2 .skills .graph>ul>li:nth-child(5)::before{content: ""; display: block; width:0;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; transition: 0.3s 1.2s;}
+.p2 .skills .graph>ul>li:nth-child(5).on::before{content: ""; display: block; width:100%;height: 100%;background:#6D6D6D;opacity: 1;position: absolute;top: 0;left: 0; }
+
+.p2 .skills .graph>ul>li:nth-child(4).active::before{background:#C5C4C4;position:absolute;top: 0;left: 0;}
+.p2 .skills .graph>ul>li:nth-child(5).active::before{background:#C5C4C4;position:absolute;top: 0;left: 0;}
+
+/* ===============페이지3 */
+.p3{background:linear-gradient(135deg,#F39696 , #BC7676);position: relative;}
+.ux_ui h1{font-size: 25px;position: absolute;top: 12px;right: 50px;font-family: "Sumana", serif;color: #fff;opacity: 0.8;font-weight: 600;}
+.ux_ui h1 span{font-family: "Noto Sans KR", sans-serif;font-weight:450;}
+.ux_ui>ul{display: flex;height: 100%;}
+.ux_ui>ul>li:first-child{flex: 1 1 840px;position: relative;}
+.ux_ui h2{font-size: 45px; font-family: "Noto Sans", sans-serif;color: #fff;line-height: 49px;position: absolute;top: 74px;left: 122px;letter-spacing: -0.5px;font-weight: 600;}
+.ux_ui>ul>li>span{font-size:30px; font-family: "Noto Sans KR", sans-serif;color: #fff;font-weight:350;position: absolute;top: 126px;left: 195px;}
+.ux_ui .detail{position: absolute;left: 174px;top: 282px;display: flex;flex-direction: column;gap: 34px 0;}
+.ux_ui h5{font-size: 24px; font-family: "Noto Sans KR", sans-serif;font-weight: bold;line-height: 28px;color: #fff;opacity: 0.9;}
+.ux_ui h5 span{font-size: 18px;font-weight: 300;}
+.ux_ui .button{position: absolute;bottom: 204px;left: 174px;}
+.ux_ui .button ul{display: flex;gap: 0 26px;}
+.p3 .button button{width: 170px;height: 48px;border-radius: 48px; border: 1px solid #fff;background: none;font-size: 18px;color: #fff;font-family: "Noto Sans KR", sans-serif;font-weight: 300;transition: 0.3s;}
+.p3 .button button:hover{background: #fff;color:#D48888 ;font-weight: 450;}
+.ux_ui .button button a{display: block;height: 100%;border-radius: 48px;line-height: 45px;}
+.ux_ui .go_site{position: absolute;left: 174px;bottom: 134px;display: flex;gap: 0 42px;}
+.ux_ui .go_site h3{font-size: 18px;font-family: "Noto Sans KR", sans-serif;color: #fff;position: relative;}
+.ux_ui .go_site h3::after{display: block;content: "";height: 22px;width: 2px;position: absolute;top: 4px;right: -8px;background: #fff;}
+.ux_ui .go_site ul{display: flex;gap: 0 20px;}
+.ux_ui .go_site ul a{font-size: 16px;font-family: "Noto Sans KR", sans-serif;color: #fff;text-decoration: underline;text-underline-offset:3px;font-weight: 300; transition: 0.3s;}
+.ux_ui .go_site ul a:hover{font-weight: bold;}
+.ux_ui>ul>li:last-child{flex: 1 1 1076px;position: relative;}
+.ux_ui>ul>li:last-child img{width: 1087px;position: absolute;top: 94px;left: -50px;transition: 0.5s;}
+
+.ux_ui>ul>li:last-child img:hover{scale: 1.02;}
+
+/* ===============페이지4 */
+.p4{background:linear-gradient(135deg,#D5C0EF , #8865B5);position: relative;}
+.ux_ui h2 span{font-size:30px; font-family: "Noto Sans KR", sans-serif;font-weight:350;}
+.p4 .button button{width: 170px;height: 48px;border-radius: 48px; border: 1px solid #fff;background: none;font-size: 18px;color: #fff;font-family: "Noto Sans KR", sans-serif;font-weight: 300;transition: 0.3s;}
+.p4 .button button:hover{background: #fff;color:#B59CD6 ;font-weight: 450;}
+
+/* ===============페이지5 */
+.p5{background:linear-gradient(135deg,#C9E898 , #AEC788);position: relative;}
+.p5 h1,.p5 h2,.p5 h5,.p5 .go_site h3{color: #3F3F3F;opacity: 1;} 
+.p5 .detail span{font-weight: 400;}
+.p5 .go_site h3::after{background: #3f3f3f;}
+.p5 .go_site ul a{color: #3F3F3F;font-weight:400;}
+.p5 .button button{width: 170px;height: 48px;border-radius: 48px; border: 1px solid #3f3f3f;background: none;font-size: 18px;color: #3f3f3f;font-family: "Noto Sans KR", sans-serif;font-weight: 400;transition: 0.3s;}
+.p5 .button button:hover{background: #3f3f3f;color:#BFD996 ;font-weight: 450;}
+.ux_ui>ul>li:last-child img{width: 1216px;}
+.ux_ui>ul>li:last-child .budsies{width: 1000px;margin-top: 100px;}
+
+/* ===============페이지6 */
+.p6{background:linear-gradient(135deg,#FFF6EC , #F6E1C7);position: relative;}
+.p6 h1{font-size: 25px;position: absolute;top: 12px;right: 50px;font-family: "Sumana", serif;color: #FF9700;opacity: 0.8;font-weight: 600;}
+.p6 .box{height:752px;width: 100%;position: absolute;top: 82px;}
+.p6 .box>li{height:752px;width: 1628px;background:#fff;border-radius: 0 380px 380px 0;position:absolute;top: 0;left:0px;box-shadow: 2px 2px 7px #00000011;transition: 1s ease-in-out;}
+.p6 .box>li.on{left: -1628px;z-index: 99;}
+.p6 .box .material-symbols-outlined{color: #FCB247;position: absolute;top: 50%;right:10px;transform: translateY(-50%);z-index: 10;font-size: 64px;animation:linear arrow 1.5s infinite;cursor: pointer;}
+.p6 .box .b1{color: #FCB247;position: absolute;top: 50%;right: 10px;transform: translateY(-50%);font-size: 64px;animation: arrow linear 1.5s 0.5s infinite;}
+.p6 .box .b2{color: #FCB247;position: absolute;top: 50%;right: 10px;transform: translateY(-50%);font-size: 64px;animation: arrow  linear 1.5s 1s infinite;}
+@keyframes arrow{
+  0%{right: 6px;opacity: 0;font-size: 64px;}
+  1%{right:6px;opacity: 0.8;font-size: 64px;}
+  50%{right: 46px;opacity: 1;font-size: 70px;}
+  100%{right: 78px;opacity: 0;font-size: 86px;}
+}
+.p6 .box>li h2{font-size: 42px; font-family: "Sumana", serif;color: #FF9700;position: absolute;text-transform: uppercase;top: 0;left:50%;transform: translateX(-50%);}
+.p6 .box>li h2 span{font-size: 24px;font-family: "Noto Sans KR", sans-serif;}
+.p6 .box .slider{display: flex;position: absolute;gap: 0 66px;top:120px;left: 364px;}
+.p6 .box>li ul li{width: 438px;height: 558px;overflow: hidden;transition: 0.3s;position: relative;cursor: pointer;border: 1px solid #99999980;}
+.p6 .box>li ul li:hover{border-radius: 30px;}
+.p6 .box>li ul li:hover img{transform: scale(1.01);filter: brightness(45%);}
+.p6 .box>li ul li img{width: 100%;transition: 0.3s ease-in-out;}
+.p6 .box>li p{font-size: 28px;font-weight: bold;font-family: "Noto Sans KR", sans-serif;color: #fff;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity: 0;transition: 0.3s;z-index: 100;text-align: center;}
+.p6 .box .slider li:hover p{opacity: 1;}
+.p6 .card_News .slider{display: flex;position: absolute;gap: 0 36px;top: 171px;left: 115px;}
+.p6 .card_News .slider li{width: 415px;height: 415px;overflow: hidden;transition: 0.3s;position: relative;cursor: pointer;}
+
+  
+
+/* ===============페이지7 */
+.p7{background: #282828;position: relative;}
+.p7 h1{font-size: 27px; font-family: "Sumana", serif;color: #fff;opacity: 0.8;flex-flow:initial;position: absolute;top: 0px;right: 51px;text-transform: uppercase;}
+.p7>ul{display: flex;height: 100%;}
+.p7>ul>li:first-child{flex: 1 1 948px;position: relative;}
+.p7>ul>li:first-child p{font-size:clamp(25px,1.6667vw,30px);font-family: "Noto Sans KR", sans-serif;line-height: 70px;color: #fff;position: absolute;top: 320px;left: clamp(10px,5.2083vw, 100px);}
+
+
+.p7>ul>li:last-child{flex: 1 1 972px;position: relative;}
+.p7>ul>li:last-child .circle{width: 670px;height: 670px;border: 1px solid #fff;border-radius: 50%;position: absolute;top: 136px;right: 238px;transition: 0.5s;}
+
+.p7>ul>li:last-child h2{font-size: 66px;color: #3997DC;font-family: "Patua One", serif;font-weight: initial;position: absolute;top:118px;left: 160px;}
+.p7>ul>li:last-child .circle>ul{display: flex;flex-direction: column;gap: 22px 0;position: absolute;top: 478px;left: 168px;}
+.p7>ul>li:last-child .p{display: flex;gap:0 22px;}
+.p7>ul>li:last-child .p p{font-size: 24px;font-family: "Sumana", serif;line-height: 24px;font-weight: 700;color: #fff;}
+
+.p7>ul>li:last-child .circle .small{width: 28px;height: 28px;background: #D9D9D9;border-radius: 50%;position: absolute;top:320px;left: 320px;transform: translateX(-50%) translateY(-335px);animation: rotate linear 15s infinite;}
+
+@keyframes rotate{
+  0%{rotate: 0deg;}
+  100%{rotate: 360deg;}
+}
+.p7>ul>li:last-child .circle .middle{width: 54px;height: 54px;;border-radius: 50%;position: absolute;top:310px;left: 310px;transform: translateX(-50%) translateY(335px);border: 2px solid #fff;background:#333 ;animation: rotate linear 15s infinite;}
+
+.p7>ul>li:last-child .circle .middle .s_small{width: 38px;height: 38px;;border-radius: 50%;position: absolute;top:50%;left: 50%;background:#ffffff ;transform: translate(-50%,-50%);}
+
+/* font-family: "Sumana", serif;400, 700 */
+/* font-family: "Noto Sans", sans-serif;100~900 */
+/* font-family: "Patua One", serif;400 */
+/* font-family: "Stylish", serif;400 */
+/* font-family: "Noto Sans KR", sans-serif; */
